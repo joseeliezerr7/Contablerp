@@ -12,6 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title ?? 'Panel' }} · {{ config('app.name') }}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="h-full bg-slate-100 text-slate-900 antialiased">
@@ -34,7 +37,7 @@
            :class="sidebar ? 'translate-x-0' : '-translate-x-full'"
            class="fixed inset-y-0 left-0 z-40 flex w-64 shrink-0 flex-col bg-slate-900 text-slate-300 transition-transform duration-200 lg:static lg:w-60 lg:translate-x-0">
         <div class="flex h-14 shrink-0 items-center gap-2 border-b border-slate-800 px-4">
-            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-sm font-bold text-slate-900">C</span>
+            <x-app-logo variant="light" class="h-8 w-8 shrink-0"/>
             <span class="truncate text-sm font-semibold text-white">{{ config('app.name') }}</span>
 
             <button type="button" @click="close()"

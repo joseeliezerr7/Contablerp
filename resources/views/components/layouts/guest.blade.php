@@ -16,6 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title ? $title.' · ' : '' }}{{ config('app.name') }}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="h-full bg-slate-100 text-slate-900 antialiased">
@@ -51,7 +54,7 @@
 
             <div class="relative">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg font-bold text-slate-900">C</span>
+                    <x-app-logo variant="light" class="h-10 w-10"/>
                     <span class="text-lg font-semibold">{{ config('app.name') }}</span>
                 </div>
 
@@ -95,9 +98,7 @@
             <div class="mx-auto w-full {{ $width }}">
                 {{-- Marca compacta, solo donde el panel no se ve --}}
                 <div class="mb-8 text-center lg:hidden">
-                    <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-lg font-bold text-white">
-                        C
-                    </div>
+                    <x-app-logo class="mx-auto mb-3 h-12 w-12"/>
                     <h1 class="text-xl font-semibold tracking-tight">{{ config('app.name') }}</h1>
                     <p class="mt-1 text-sm text-slate-500">Contabilidad y facturación SAR para Honduras</p>
                 </div>
@@ -112,9 +113,7 @@
     <div class="flex min-h-full flex-col justify-center px-4 py-12">
         <div class="mx-auto w-full {{ $width }}">
             <div class="mb-8 text-center">
-                <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-lg font-bold text-white">
-                    C
-                </div>
+                <x-app-logo class="mx-auto mb-3 h-12 w-12"/>
                 <h1 class="text-xl font-semibold tracking-tight">{{ config('app.name') }}</h1>
                 <p class="mt-1 text-sm text-slate-500">Contabilidad y facturación SAR para Honduras</p>
             </div>
