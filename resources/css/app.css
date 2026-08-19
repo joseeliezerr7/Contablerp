@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/* Evita que los desplegables de Alpine parpadeen visibles antes de que Alpine
+   arranque. Sin esta regla, x-cloak no oculta nada. */
+[x-cloak] {
+    display: none !important;
+}
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* ---------------------------------------------------------------------------
+   Tablas en pantallas pequeñas
+   ---------------------------------------------------------------------------
+   En un teléfono, una tabla de ocho columnas obliga a desplazar de lado para
+   leer un solo registro, y al desplazarse se pierde de vista la columna que
+   dice de qué registro se trata. Por debajo de 768 px cada fila se convierte en
+   una ficha y cada celda muestra su rótulo a la izquierda y el dato a la
+   derecha.
+
+   El rótulo sale de `data-label`, escrito en cada celda. Derivarlo del
+   encabezado con JavaScript ahorraría tecleo, pero habría que volver a
+   ejecutarlo cada vez que Livewire redibuja la tabla —al paginar, al filtrar—,
+   y una tabla sin rótulos es peor que una tabla con desplazamiento.
+
+   Una celda sin `data-label` se muestra igual, ocupando la ficha entera: es lo
+   que corresponde a la columna de acciones. */
+@media (max-width: 767px) {
+    /* El encabezado se oculta a la vista pero **no se quita del árbol de
+       accesibilidad**: con `display: none` desaparecería, y las celdas se
+       quedarían sin columna a la que referirse. Recortado sigue ahí, y un
+       lector de pantalla puede anunciar «Proveedor: Ferretera Industrial». */
+    .table-stacked thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    .table-stacked tbody,
+    .table-stacked tfoot {
+        display: block;
+    }
+
+    .table-stacked tbody tr,
+    .table-stacked tfoot tr {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .table-stacked tbody tr + tr,
+    .table-stacked tfoot tr {
+        border-top: 1px solid var(--color-slate-200);
+    }
+
+    .table-stacked tbody td,
+    .table-stacked tfoot td {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.25rem 1rem;
+        width: auto;
+        padding: 0.25rem 1rem;
+        text-align: right;
+    }
+
+    /* Celdas con controles —las tablas de captura de líneas—: el campo ocupa
+       el ancho que le queda y el mensaje de error baja a su propia línea. */
+    .table-stacked tbody td > input,
+    .table-stacked tbody td > select,
+    .table-stacked tbody td > textarea {
+        flex: 1 1 55%;
+        min-width: 0;
+    }
+
+    .table-stacked tbody td > p {
+        flex: 1 1 100%;
+        text-align: left;
+    }
+
+    .table-stacked tbody td[data-label]::before,
+    .table-stacked tfoot td[data-label]::before {
+        content: attr(data-label);
+        flex: 0 0 auto;
+        text-align: left;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--color-slate-500);
+        white-space: nowrap;
+    }
+
+    /* La celda de acciones no lleva rótulo: se alinea a la derecha y se separa
+       un poco del resto. */
+    .table-stacked tbody td:not([data-label]),
+    .table-stacked tfoot td:not([data-label]) {
+        justify-content: flex-end;
+        padding-top: 0.5rem;
+    }
+
+    /* Una celda con `colspan` no es un dato sino un rótulo de la fila —«Saldo
+       inicial», «Sin resultados», «Movimiento del período»—: ocupa la ficha
+       entera y se centra sobre el importe que la sigue. */
+    .table-stacked tbody td[colspan],
+    .table-stacked tfoot td[colspan] {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        color: var(--color-slate-500);
+    }
+
+    /* Una tabla apilada ya no necesita desplazamiento lateral. */
+    .table-stacked-wrap {
+        overflow-x: visible;
+    }
+}
