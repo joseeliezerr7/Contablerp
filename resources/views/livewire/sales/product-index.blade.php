@@ -7,7 +7,7 @@
         <div>
             <h2 class="text-lg font-semibold">Productos y servicios</h2>
             <p class="text-sm text-slate-500">
-                {{ $products->total() }} en el catálogo. Las existencias llegan en la Fase 5.
+                {{ $products->total() }} en el catálogo. Las existencias se consultan en Inventario → Existencias.
             </p>
         </div>
 
@@ -135,7 +135,7 @@
 
                     @if ($canSeeCost)
                         <x-field label="Costo de referencia" for="cost" error="cost"
-                                 hint="En la Fase 5 lo sustituye el costo promedio del kardex.">
+                                 hint="Solo de referencia: el costo real lo lleva el kárdex, al costo promedio ponderado.">
                             <input id="cost" type="text" inputmode="decimal" wire:model="cost"
                                    class="{{ $input }} text-right font-mono">
                         </x-field>
