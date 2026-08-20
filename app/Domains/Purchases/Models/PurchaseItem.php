@@ -92,8 +92,7 @@ class PurchaseItem extends Model
     }
 
     /**
-     * Costo unitario neto de descuentos, que es el que debe entrar al kardex
-     * en la Fase 5.
+     * Costo unitario neto de descuentos, que es el que debe entrar al kardex.
      */
     public function netUnitCost(): Money
     {

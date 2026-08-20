@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Bodega. El control de existencias ocurre a este nivel (Fase 5).
+ * Bodega. El control de existencias ocurre a este nivel.
  *
  * @property int $id
  * @property int $company_id

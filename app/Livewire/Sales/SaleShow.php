@@ -12,7 +12,7 @@ use Livewire\Component;
 /**
  * La factura, de solo lectura.
  *
- * Faltaba desde la Fase 3 y el hueco venía del propio diseño: un documento
+ * El hueco venía del propio diseño: un documento
  * emitido es inmutable, así que la pantalla de edición solo sirve borradores.
  * Al emitirlo desaparecía de la vista, y la única forma de mirarlo era bajarse
  * el PDF —que es un documento fiscal para el cliente, no una pantalla de

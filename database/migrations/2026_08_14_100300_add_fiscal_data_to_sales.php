@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Schema;
  * Datos fiscales congelados en la factura.
  *
  * El CAI, el rango y la fecha límite se copian en el documento al emitirlo, igual
- * que la Fase 3 congela la tasa del impuesto. La razón es la misma y aquí pesa
+ * que se congela la tasa del impuesto. La razón es la misma y aquí pesa
  * más: reimprimir una factura de hace dos años tiene que producir **el mismo
  * papel** que se entregó entonces. Si los datos se leyeran de la autorización
  * vigente, la reimpresión mostraría un CAI que esa factura nunca llevó, y eso es

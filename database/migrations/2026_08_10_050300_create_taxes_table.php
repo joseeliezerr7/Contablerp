@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Schema;
  * además sus dos cuentas —la de débito fiscal y la de crédito fiscal— para que
  * el motor contable no tenga que adivinarlas.
  *
- * Las retenciones y exoneraciones llegan en la Fase 7; esta tabla ya deja el
- * lugar donde encajarán.
+ * Las retenciones y exoneraciones llegan en migraciones posteriores; esta
+ * tabla ya deja el lugar donde encajarán.
  */
 return new class extends Migration
 {

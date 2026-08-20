@@ -13,7 +13,7 @@ use App\Domains\Sales\Services\CreditNoteService;
 use App\Domains\Sales\Services\SaleService;
 
 /**
- * Invariante de la Fase 9: **todo documento fiscal emitido es válido.**
+ * Invariante: **todo documento fiscal emitido es válido.**
  *
  * Tres condiciones, y las tres son de ley, no del sistema:
  *

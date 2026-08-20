@@ -39,7 +39,7 @@ beforeEach(function () {
     makeCustomer(['name' => 'Cliente de mostrador', 'is_walk_in' => true]);
 
     // El mostrador es del cajero, no del contador: el contador puede anular una
-    // factura pero no emitirla, y esa segregación viene de la Fase 3.
+    // factura pero no emitirla, y esa segregación es deliberada.
     $this->user = actingAsUserOf($this->company, role: PermissionCatalog::CASHIER);
 });
 
@@ -367,8 +367,8 @@ it('no deja emitir si los cobros no cubren el total', function () {
 it('deja al cajero facturar en el mostrador', function () {
     actingAsUserOf($this->company, role: PermissionCatalog::CASHIER);
 
-    // Desde la Fase 9 el cajero factura: quien cobra en el mostrador es quien
-    // emite. Lo que sigue sin poder es anular.
+    // El cajero factura: quien cobra en el mostrador es quien emite. Lo que
+    // sigue sin poder es anular.
     $this->get(route('pos'))->assertOk();
 });
 

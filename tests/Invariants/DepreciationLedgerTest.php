@@ -20,7 +20,7 @@ use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Criterio de aceptación de la Fase 7: **la depreciación acumulada que llevan
+ * Criterio de aceptación: **la depreciación acumulada que llevan
  * los activos tiene que ser la que dice el libro.**
  *
  * Son dos registros de lo mismo por caminos distintos: el acumulado que guarda

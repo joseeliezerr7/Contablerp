@@ -15,8 +15,8 @@ use Livewire\Component;
  *
  * La lista de corridas solo mostraba el total del mes. A la pregunta que
  * siempre llega —«¿por qué agosto dio 4 200 si julio dio 3 900?»— no había
- * respuesta: las líneas por activo estaban en `depreciation_run_lines` desde la
- * Fase 7 y ninguna pantalla las leía.
+ * respuesta: las líneas por activo estaban en `depreciation_run_lines`
+ * y ninguna pantalla las leía.
  */
 #[Title('Corrida de depreciación')]
 class DepreciationShow extends Component

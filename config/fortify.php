@@ -162,9 +162,8 @@ return [
     */
 
     'features' => [
-        // Registro público desactivado hasta la Fase 8 (alta self-service con
-        // plan y suscripción). Hoy un usuario registrado nacería sin tenant ni
-        // empresa y quedaría en un limbo sin acceso.
+        // Registro público desactivado: un usuario registrado nacería sin
+        // tenant ni empresa y quedaría en un limbo sin acceso.
         // Features::registration(),
         Features::resetPasswords(),
         // Features::emailVerification(),

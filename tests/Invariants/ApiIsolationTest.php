@@ -17,7 +17,7 @@ use App\Support\Tenancy\CompanyContext;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * Invariante de la Fase 9C: **la API no es una puerta trasera al aislamiento.**
+ * Invariante: **la API no es una puerta trasera al aislamiento.**
  *
  * Una API pública multiplica la superficie: donde la aplicación tenía pantallas
  * que solo se alcanzan con sesión, ahora hay URLs que cualquiera puede llamar con

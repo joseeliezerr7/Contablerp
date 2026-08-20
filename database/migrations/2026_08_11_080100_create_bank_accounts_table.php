@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Schema;
  * contable**: el número de cuenta, el banco, el tipo y el correlativo de
  * cheques. El dinero vive donde siempre ha vivido, en el libro, y el saldo se
  * lee de ahí. Guardar aquí un saldo propio crearía un segundo número que
- * mantener sincronizado, que es justamente el error que la Fase 5 costó
- * aprender con el kardex.
+ * mantener sincronizado, que es justamente el error que ya costó aprender
+ * con el kardex.
  *
  * La relación con `accounts` es uno a uno: cada cuenta bancaria tiene su
  * cuenta contable y ninguna cuenta contable sirve a dos bancos, porque si

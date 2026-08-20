@@ -76,8 +76,7 @@ return new class extends Migration
         //
         // `company_id` se queda fuera de la columna generada y entra en el
         // índice: MySQL no admite una clave foránea en cascada como base de una
-        // columna generada STORED, cosa que este proyecto ya aprendió a la mala
-        // en la Fase 1.
+        // columna generada STORED, cosa que este proyecto ya aprendió a la mala.
         DB::statement(<<<'SQL'
             ALTER TABLE depreciation_runs
             ADD COLUMN active_period_key DATE

@@ -10,7 +10,7 @@ use App\Support\Money;
 /**
  * Qué alcanza cada rol en tesorería.
  *
- * Estas pruebas existen por una lección concreta: en la Fase 5 el contador se
+ * Estas pruebas existen por una lección concreta: en su momento el contador se
  * quedó fuera del formulario de ajustes porque los permisos se repartieron
  * pensando en una empresa grande, y ninguna prueba lo detectó porque ninguna
  * probaba las pantallas. Los servicios pueden estar impecables y el módulo ser

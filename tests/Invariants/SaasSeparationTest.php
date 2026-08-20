@@ -18,7 +18,7 @@ use Database\Seeders\PlanSeeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Invariante de la Fase 8: **el cobro del servicio no es contabilidad del
+ * Invariante: **el cobro del servicio no es contabilidad del
  * cliente.**
  *
  * Lo que el proveedor le cobra al cliente por usar el sistema es ingreso del

@@ -20,8 +20,7 @@ use Database\Seeders\PlanSeeder;
 use Spatie\Permission\PermissionRegistrar;
 
 /**
- * Criterio de aceptación de la Fase 8: **alta self-service de una empresa
- * nueva**.
+ * Criterio de aceptación: **alta self-service de una empresa nueva**.
  *
  * De un formulario público a una empresa que puede emitir su primera factura,
  * en una sola transacción. Un alta a medias deja a alguien registrado que no

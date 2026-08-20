@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Schema;
 /**
  * Catálogo de productos y servicios.
  *
- * En esta fase es solo catálogo: sin existencias ni kardex, que llegan en la
- * Fase 5 junto con el costeo promedio. `track_inventory` ya distingue lo que
- * entonces llevará control de existencias de lo que nunca lo llevará —los
- * servicios—, para no tener que reclasificar el catálogo después.
+ * Esta migración crea solo el catálogo: las existencias y el kardex llegan en
+ * migraciones posteriores junto con el costeo promedio. `track_inventory` ya
+ * distingue lo que llevará control de existencias de lo que nunca lo llevará
+ * —los servicios—, para no tener que reclasificar el catálogo después.
  */
 return new class extends Migration
 {
@@ -33,8 +33,8 @@ return new class extends Migration
             $table->foreignId('product_category_id')->nullable()->constrained()->nullOnDelete();
             $table->foreignId('tax_id')->nullable()->constrained()->nullOnDelete();
 
-            // Costo de referencia mientras no exista inventario. En la Fase 5 lo
-            // sustituye el costo promedio calculado por el kardex.
+            // Costo de referencia mientras no exista inventario. Lo sustituye
+            // el costo promedio calculado por el kardex.
             $table->decimal('cost', 18, 6)->default(0);
 
             $table->boolean('track_inventory')->default(false);

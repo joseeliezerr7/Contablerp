@@ -196,7 +196,7 @@ it('paga normal cuando no se declara ninguna retención', function () {
 it('registra como activo lo que el cliente nos retuvo', function () {
     $tipo = withholdingType(code: 'ISRV', rate: '12.5', scope: WithholdingScope::Sale);
 
-    // Sin existencia no se puede vender: la Fase 5 lo bloquea.
+    // Sin existencia no se puede vender: el control de existencias lo bloquea.
     creditPurchaseFor($this, '600.00', 'FAC-STOCK');
 
     $venta = $this->sales->createAndIssue([
@@ -229,7 +229,7 @@ it('registra como activo lo que el cliente nos retuvo', function () {
 it('cancela la cuenta del cliente por el total aunque entre menos efectivo', function () {
     $tipo = withholdingType(code: 'ISRV', rate: '12.5', scope: WithholdingScope::Sale);
 
-    // Sin existencia no se puede vender: la Fase 5 lo bloquea.
+    // Sin existencia no se puede vender: el control de existencias lo bloquea.
     creditPurchaseFor($this, '600.00', 'FAC-STOCK');
 
     $venta = $this->sales->createAndIssue([

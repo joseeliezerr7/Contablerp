@@ -19,7 +19,7 @@ use Illuminate\Support\Str;
 /**
  * Alta self-service: de un formulario público a una empresa lista para facturar.
  *
- * Criterio de aceptación de la Fase 8. En **una sola transacción** se crean el
+ * En **una sola transacción** se crean el
  * usuario, la cuenta, la suscripción de prueba y la empresa con todo lo que
  * necesita para operar —sucursal, bodega, plan de cuentas hondureño, ejercicio
  * fiscal con sus doce períodos, roles e impuestos—.

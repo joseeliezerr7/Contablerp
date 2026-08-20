@@ -34,9 +34,8 @@ use Livewire\Component;
  * de no ejecutar la consulta. Si el permiso falta, el arreglo llega vacío y la
  * vista no dibuja el panel.
  *
- * Es el mismo error que ya apareció tres veces en este proyecto —Fases 5, 6 y
- * 9A— cuando un rol podía crear algo que no podía ver. Aquí se paga por
- * adelantado.
+ * Es el mismo error que ya apareció varias veces en este proyecto: un rol que
+ * podía crear algo que no podía ver. Aquí se paga por adelantado.
  */
 #[Title('Dashboard')]
 class Dashboard extends Component
@@ -280,7 +279,7 @@ class Dashboard extends Component
 
     /**
      * Saldos de caja y bancos, de las cuentas marcadas como equivalentes de
-     * efectivo en la Fase 2.
+     * efectivo en el plan de cuentas.
      *
      * @return list<array{name: string, code: string, balance: Money}>
      */

@@ -36,7 +36,7 @@ use Illuminate\Support\Facades\DB;
  * ## Sin caja abierta no se vende
  *
  * Es la regla que hace que el arqueo signifique algo. El efectivo entra en la
- * cuenta contable de **la sesión abierta**, y el arqueo de la Fase 6 recorre esa
+ * cuenta contable de **la sesión abierta**, y el arqueo recorre esa
  * cuenta durante la ventana de la sesión: si una venta pudiera cobrarse sin
  * sesión, ese dinero aparecería en la caja sin que ningún cierre lo hubiera
  * contado, y el faltante saldría al día siguiente sin explicación.

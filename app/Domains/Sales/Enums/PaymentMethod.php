@@ -25,7 +25,7 @@ enum PaymentMethod: string
 
     /**
      * Los medios que exigen anotar un número: sin él, la conciliación bancaria
-     * de la Fase 6 no puede casar el movimiento.
+     * no puede casar el movimiento.
      */
     public function requiresReference(): bool
     {

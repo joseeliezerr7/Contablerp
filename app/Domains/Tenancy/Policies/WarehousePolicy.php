@@ -34,7 +34,7 @@ class WarehousePolicy
 
     public function delete(User $user, Warehouse $warehouse): bool
     {
-        // La bodega por defecto recibe las entradas de compras (Fase 5).
+        // La bodega por defecto recibe las entradas de compras.
         return $this->belongsToActiveCompany($warehouse) && ! $warehouse->is_default;
     }
 

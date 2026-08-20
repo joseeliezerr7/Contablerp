@@ -10,8 +10,6 @@ use App\Models\User;
 /**
  * Capa 4 del aislamiento. Company no tiene scope global (es la empresa), así
  * que su autorización se resuelve exclusivamente por pertenencia.
- *
- * Los permisos por rol se añaden en la Fase 1, cuando exista el RBAC.
  */
 class CompanyPolicy
 {

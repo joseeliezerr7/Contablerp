@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Schema;
  * El marcado vive en una tabla aparte y no como una bandera en la línea. Una
  * bandera diría «esto está conciliado» pero no en cuál de las conciliaciones,
  * y desconciliar no dejaría rastro; además `journal_entry_lines` es inmutable
- * por diseño desde la Fase 1.
+ * por diseño.
  *
  * La identidad que debe cumplirse al cerrar:
  *

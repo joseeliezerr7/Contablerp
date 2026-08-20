@@ -11,7 +11,8 @@ use Livewire\Livewire;
 /**
  * Los mensajes que ve el usuario están en español.
  *
- * Esto estuvo roto desde la Fase 0 y ninguna prueba lo notó: `assertHasErrors`
+ * Esto estuvo roto desde el arranque del proyecto y ninguna prueba lo notó:
+ * `assertHasErrors`
  * comprueba **la regla** que falló, no el texto, así que una pantalla que
  * mostraba «validation.required» pasaba todas las pruebas. El sistema corre con
  * `APP_LOCALE=es` y no existía la carpeta `lang/`, de modo que Laravel devolvía

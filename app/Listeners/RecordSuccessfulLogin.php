@@ -8,8 +8,7 @@ use App\Models\User;
 use Illuminate\Auth\Events\Login;
 
 /**
- * Rastro mínimo de acceso. La auditoría completa (tabla audit_logs) llega en
- * la Fase 1 junto con el motor contable.
+ * Rastro mínimo de acceso. La auditoría completa vive en la tabla audit_logs.
  */
 class RecordSuccessfulLogin
 {

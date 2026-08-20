@@ -19,7 +19,7 @@ use App\Support\Money;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Criterio de aceptación de la Fase 5: **el kardex valorizado tiene que dar el
+ * Criterio de aceptación: **el kardex valorizado tiene que dar el
  * saldo de la cuenta contable de inventario.**
  *
  * Son dos registros independientes de la misma realidad, escritos por caminos
@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\DB;
  * ejercita todas las operaciones que existen —comprar, vender, ajustar,
  * trasladar y anular cada una— y compara los dos números al final.
  *
- * Si una fase futura añade una operación que mueve existencias, esta prueba es
+ * Si a futuro se añade una operación que mueve existencias, esta prueba es
  * la que avisa cuando se le olvide mover el valor.
  */
 beforeEach(function () {
@@ -264,7 +264,7 @@ it('vuelve a cero cuando se anula absolutamente todo', function () {
 it('mantiene el libro contable cuadrado con el inventario en marcha', function () {
     exerciseEveryStockPath($this);
 
-    // La invariante de la Fase 1 sigue en pie después de todo lo anterior.
+    // La invariante del libro cuadrado sigue en pie después de todo lo anterior.
     $totales = DB::table('journal_entry_lines as l')
         ->join('journal_entries as e', 'e.id', '=', 'l.journal_entry_id')
         ->where('e.status', JournalEntryStatus::Posted->value)

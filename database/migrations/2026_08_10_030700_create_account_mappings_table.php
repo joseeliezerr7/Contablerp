@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Schema;
  * sistema solo serviría para una empresa. Cada clave ('sales.revenue',
  * 'purchases.payable'...) se resuelve aquí a la cuenta concreta de la empresa.
  *
- * En la Fase 3 se añade resolución en cascada por producto, categoría, cliente
- * y sucursal; hoy la cuenta es la predeterminada de la empresa.
+ * La resolución en cascada por producto, categoría, cliente y sucursal se
+ * añade después; hoy la cuenta es la predeterminada de la empresa.
  */
 return new class extends Migration
 {

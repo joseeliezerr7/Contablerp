@@ -15,8 +15,9 @@ use App\Domains\Accounting\Services\FinancialStatementService;
  * con naturaleza deudora. En los dos casos el importe tiene que **restar** de
  * su bloque.
  *
- * Estas pruebas existen porque el fallo estuvo latente cinco fases: hasta que
- * la Fase 7 depreció algo, ninguna cuenta de contrapartida había tenido saldo,
+ * Estas pruebas existen porque el fallo estuvo latente mucho tiempo: hasta que
+ * la depreciación registró su primera corrida, ninguna cuenta de contrapartida
+ * había tenido saldo,
  * y el balance descuadraba exactamente por el doble del importe —la firma de un
  * signo invertido—.
  */

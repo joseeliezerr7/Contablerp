@@ -148,7 +148,7 @@ class PointOfSale extends Component
      * Totales calculados en el servidor.
      *
      * No se confía en lo que traiga el navegador ni siquiera para mostrar: es la
-     * regla del sistema desde la Fase 0, y aquí además el importe que se muestra
+     * regla del sistema desde el inicio, y aquí además el importe que se muestra
      * es el que el cliente va a pagar en efectivo.
      *
      * @return array{subtotal: Money, tax: Money, total: Money}

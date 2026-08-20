@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\DB;
  * El costo entra **neto de descuentos**, a diferencia de las ventas, donde el
  * ingreso se acredita bruto y el descuento se carga aparte. La razón no es de
  * simetría sino de valuación: el inventario debe quedar registrado a lo que
- * realmente costó, porque de ese importe sale el costo promedio de la Fase 5.
+ * realmente costó, porque de ese importe sale el costo promedio del kardex.
  * Un descuento comercial reduce el costo, no es un gasto separado.
  */
 final class PurchaseService

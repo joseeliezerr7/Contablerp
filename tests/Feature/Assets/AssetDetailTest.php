@@ -18,7 +18,7 @@ use Livewire\Livewire;
 /**
  * Ver un activo y una corrida de depreciación.
  *
- * `depreciation_run_lines` guarda desde la Fase 7 una fila por activo y por mes
+ * `depreciation_run_lines` guarda una fila por activo y por mes
  * —cuota, acumulada y valor en libros de ese momento— y **ninguna pantalla la
  * leía**. El listado de activos mostraba solo el acumulado de hoy, y el de
  * corridas solo el total del mes: a «¿por qué agosto dio más que julio?» no

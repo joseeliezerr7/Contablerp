@@ -19,7 +19,7 @@ use Livewire\WithPagination;
 /**
  * Quién hizo qué y cuándo.
  *
- * La bitácora se escribe desde la Fase 2 pero hasta ahora solo se podía leer con
+ * La bitácora se escribía desde el inicio pero solo se podía leer con
  * un SELECT. Es la pantalla que le pide el contador externo cuando pregunta
  * «¿quién anuló esta factura?», y la que responde sola cuando falta efectivo en
  * la caja.

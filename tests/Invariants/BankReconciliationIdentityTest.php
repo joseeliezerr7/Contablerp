@@ -19,7 +19,7 @@ use App\Support\Money;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Criterio de aceptación de la Fase 6:
+ * Criterio de aceptación:
  *
  *     saldo del extracto + depósitos en tránsito − cheques pendientes
  *         = saldo en libros a la fecha de corte
@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\DB;
  * líneas conciliables: cobros, pagos, compras de contado, ventas de contado,
  * partidas manuales y anulaciones.
  *
- * Si una fase futura añade una forma de mover dinero que no deje línea en la
+ * Si a futuro se añade una forma de mover dinero que no deje línea en la
  * cuenta bancaria, o que la deje mal, es aquí donde se nota.
  */
 beforeEach(function () {

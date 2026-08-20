@@ -15,8 +15,8 @@ use Illuminate\Console\Command;
  * ## Por qué hace falta
  *
  * `CompanyService` provisiona los roles **una vez**, al crear la empresa. Cuando
- * una fase nueva añade permisos —o cambia lo que puede hacer un rol, como la
- * Fase 9 con el cajero, que pasó a poder facturar en el mostrador—, las empresas
+ * una versión nueva añade permisos —o cambia lo que puede hacer un rol, como
+ * el cajero, que pasó a poder facturar en el mostrador—, las empresas
  * que ya existen se quedan con los roles de antes. El síntoma es desconcertante:
  * el código dice que el cajero puede vender, la pantalla le responde 403, y no
  * hay nada mal en el código.

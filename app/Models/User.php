@@ -45,7 +45,7 @@ class User extends Authenticatable
     /**
      * Los permisos viven bajo un solo guard.
      *
-     * Spatie los separa por guard, y desde la Fase 9 hay dos —`web` para la
+     * Spatie los separa por guard, y aquí hay dos —`web` para la
      * aplicación y `sanctum` para la API—. Sin esta línea, una petición
      * autenticada con token busca los permisos del guard `sanctum`, que no
      * existen, y falla con «no existe el permiso X para el guard sanctum»

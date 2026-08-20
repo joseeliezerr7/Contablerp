@@ -44,7 +44,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
- * Datos de demostración de la Fase 0.
+ * Datos de demostración.
  *
  * Crea dos empresas bajo la misma cuenta para poder ejercitar el selector de
  * empresa, y un usuario con acceso a una sola de ellas para comprobar a mano el
@@ -163,8 +163,8 @@ class DatabaseSeeder extends Seeder
         $this->seedFiscalDemo($laCeiba);
         $this->seedFiscalDemo($tegucigalpa);
 
-        // El orden importa desde la Fase 5: no se puede vender mercadería que
-        // todavía no se ha comprado.
+        // El orden importa: no se puede vender mercadería que todavía no se
+        // ha comprado.
         $this->seedSampleEntries($laCeiba, $contador);
         $this->seedCatalogDemo($laCeiba, $contador);
         $this->seedPurchasesDemo($laCeiba, $contador);
@@ -548,9 +548,8 @@ class DatabaseSeeder extends Seeder
     }
 
     /**
-     * Facturas y un cobro. Va después de las compras: desde la Fase 5 cada
-     * factura descarga la bodega, y no se puede despachar lo que no se ha
-     * recibido.
+     * Facturas y un cobro. Va después de las compras: cada factura descarga
+     * la bodega, y no se puede despachar lo que no se ha recibido.
      */
     private function seedSalesDemo(Company $company, User $user): void
     {

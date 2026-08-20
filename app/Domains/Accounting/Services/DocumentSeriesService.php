@@ -85,7 +85,7 @@ final class DocumentSeriesService
     }
 
     /**
-     * Las facturas de venta **no** se numeran aquí. Desde la Fase 9 su
+     * Las facturas de venta **no** se numeran aquí. Su
      * correlativo lo entrega `FiscalNumberService` contra la autorización del
      * SAR, que tiene rango, techo y fecha de caducidad. Una serie interna no
      * puede prometer nada de eso.

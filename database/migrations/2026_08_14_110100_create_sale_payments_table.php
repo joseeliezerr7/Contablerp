@@ -11,12 +11,11 @@ use Illuminate\Support\Facades\Schema;
  *
  * ## Por qué una tabla y no la columna que ya había
  *
- * `sales.deposit_account_id` alcanza para una venta cobrada de una sola forma,
- * y hasta la Fase 9 eso era todo lo que existía. En un mostrador no: el cliente
+ * `sales.deposit_account_id` alcanza para una venta cobrada de una sola forma.
+ * En un mostrador no: el cliente
  * paga trescientos en efectivo y el resto con tarjeta, y esos dos lempiras
  * entran en cuentas contables distintas. Con una sola columna habría que elegir
- * una y mentir sobre la otra —y la conciliación bancaria de la Fase 6 dejaría de
- * casar—.
+ * una y mentir sobre la otra —y la conciliación bancaria dejaría de casar—.
  *
  * La columna vieja no se elimina: las facturas emitidas antes de esta migración
  * la tienen, y las ventas al crédito que se cobran después siguen pasando por

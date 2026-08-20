@@ -12,7 +12,7 @@ use Livewire\Component;
 /**
  * La ficha del activo, con su historia de depreciación.
  *
- * `depreciation_run_lines` guarda una fila por activo y por mes desde la Fase 7,
+ * `depreciation_run_lines` guarda una fila por activo y por mes,
  * con la cuota, la acumulada y el valor en libros de ese momento. Nunca hubo
  * pantalla que la leyera: el listado solo mostraba el acumulado de hoy, así que
  * a la pregunta «¿desde cuándo se está depreciando esto y cuánto llevaba en

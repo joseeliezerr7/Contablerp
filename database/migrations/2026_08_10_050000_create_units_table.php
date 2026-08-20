@@ -7,8 +7,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * Unidades de medida. En la Fase 5 se les añade el factor de conversión para
- * poder comprar en cajas y vender en unidades.
+ * Unidades de medida. El factor de conversión —el que permite comprar en cajas
+ * y vender en unidades— se añade en una migración posterior.
  */
 return new class extends Migration
 {

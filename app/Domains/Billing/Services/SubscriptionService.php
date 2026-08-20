@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\DB;
  *
  * ## Estado del tenant y estado de la suscripción
  *
- * El tenant ya tenía su propio estado desde la Fase 0. Se mantienen sincronizados
+ * El tenant ya tenía su propio estado desde el inicio. Se mantienen sincronizados
  * en un solo sitio —aquí— porque el acceso al sistema lo decide el tenant y el
  * cobro lo decide la suscripción, y tener dos verdades sobre si alguien puede
  * entrar es pedir que se contradigan.

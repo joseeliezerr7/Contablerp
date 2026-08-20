@@ -425,9 +425,9 @@ final class PermissionCatalog
             // Atiende el mostrador: factura de contado en el punto de venta,
             // cobra recibos y lleva su caja. No anula nada.
             //
-            // Hasta la Fase 9 no podía facturar, porque no existía el POS y
-            // facturar era capturar un documento entero. Con el mostrador, quien
-            // cobra **es** quien emite: negárselo obligaría a que un vendedor
+            // Sin el POS, facturar era capturar un documento entero. Con el
+            // mostrador, quien cobra **es** quien emite: negárselo obligaría
+            // a que un vendedor
             // firmara cada venta de contado. Lo que sigue fuera de su alcance es
             // anular —deshacer una venta ya emitida no es trabajo de quien la
             // hizo— y todo lo que sea crédito.

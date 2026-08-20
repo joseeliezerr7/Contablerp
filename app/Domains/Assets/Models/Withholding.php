@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * Guarda la tasa con la que se practicó y no solo el tipo: cuando el fisco
  * cambie el porcentaje, los documentos de ayer deben seguir mostrando el de
- * ayer. Es el mismo criterio que ya se aplicó a los impuestos en la Fase 3.
+ * ayer. Es el mismo criterio que ya se aplica a los impuestos.
  *
  * @property string $rate
  * @property string $amount

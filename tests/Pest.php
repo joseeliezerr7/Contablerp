@@ -199,7 +199,7 @@ function makeSupplier(array $attributes = []): Supplier
  * Producto de la empresa activa, con precio en la lista indicada.
  *
  * `$tracked` decide si lleva control de existencias. Por defecto no lo lleva,
- * para que las pruebas de ventas y compras anteriores a la Fase 5 sigan
+ * para que las pruebas de ventas y compras que no ejercitan inventario sigan
  * describiendo lo que describían.
  */
 function makeProduct(

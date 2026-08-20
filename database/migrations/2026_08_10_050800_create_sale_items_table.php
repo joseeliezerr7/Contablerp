@@ -44,8 +44,8 @@ return new class extends Migration
             $table->decimal('subtotal', 18, 4)->comment('Cantidad × precio, ya descontado');
             $table->decimal('total', 18, 4)->comment('Subtotal + impuesto');
 
-            // Costo unitario al momento de la venta. Se llena en la Fase 5,
-            // cuando exista el kardex; hasta entonces queda en cero.
+            // Costo unitario al momento de la venta. Lo llena el kardex;
+            // mientras no exista, queda en cero.
             $table->decimal('unit_cost', 18, 6)->default(0);
 
             $table->unique(['sale_id', 'line_number']);

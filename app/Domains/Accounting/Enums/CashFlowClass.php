@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Domains\Accounting\Enums;
 
 /**
- * Clasificación de la cuenta para el Estado de Flujo de Efectivo (Fase 2).
- * Se captura desde ya en el plan de cuentas para no tener que reclasificar
+ * Clasificación de la cuenta para el Estado de Flujo de Efectivo.
+ * Se captura en el plan de cuentas para no tener que reclasificar
  * históricos después.
  */
 enum CashFlowClass: string
